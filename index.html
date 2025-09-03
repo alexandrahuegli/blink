@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blinking Screen</title>
-    <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blinking Screen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Start Page -->
+  <div id="start-page">
+    <h1>Custom Blink Settings</h1>
 
-  </head>
-  <body>
-    <div class="flash">
-      <script src="script.js" defer></script>
-    </div>
-  </body>
+    <label>Frequency 1 (Hz):
+      <input type="number" id="freq1" value="4.5" step="0.1" min="0.01">
+    </label>
+    <br><br>
+
+    <label>Frequency 2 (Hz):
+      <input type="number" id="freq2" value="12" step="0.1" min="0.01">
+    </label>
+    <br><br>
+
+    <label>Total runtime (minutes):
+      <input type="number" id="runtime" value="5" step="1" min="0">
+    </label>
+    <br><br>
+
+    <button id="start-btn">Start</button>
+    <p style="font-size:0.9em; color:#bbb; margin-top:12px">
+      While running: press <strong>Esc</strong> to stop and return.
+    </p>
+  </div>
+
+  <!-- Blink Page -->
+  <div id="blink-page" style="display:none;">
+    <div class="flash"></div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
 </html>

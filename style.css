@@ -1,12 +1,29 @@
+html,body { height: 100%; }
 body {
   margin: 0;
   padding: 0;
   overflow: hidden;
   background: black;
+  color: white;
+  font-family: sans-serif;
+}
+
+#start-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #111;
+}
+
+#blink-page {
+  width: 100vw;
+  height: 100vh;
 }
 
 .flash {
-  width: 100vw;
-  height: 100vh;
-  background: red;
+  width: 100%;
+  height: 100%;
+  background: black; /* default off state */
 }
