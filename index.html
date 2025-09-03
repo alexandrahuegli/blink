@@ -3,36 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blinking Screen</title>
+  <title>Custom Blink</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Start Page -->
   <div id="start-page">
     <h1>Custom Blink Settings</h1>
 
     <label>Frequency 1 (Hz):
       <input type="number" id="freq1" value="4.5" step="0.1" min="0.01">
-    </label>
-    <br><br>
+    </label><br><br>
 
     <label>Frequency 2 (Hz):
       <input type="number" id="freq2" value="12" step="0.1" min="0.01">
-    </label>
-    <br><br>
+    </label><br><br>
+
+    <label>Flash color:
+      <input type="color" id="flashColor" value="#ff0000">
+    </label><br><br>
+
+    <label>Background color:
+      <input type="color" id="bgColor" value="#000000">
+    </label><br><br>
 
     <label>Total runtime (minutes):
-      <input type="number" id="runtime" value="5" step="1" min="0">
-    </label>
-    <br><br>
+      <input type="number" id="runtime" value="5.5" step="1" min="0">
+    </label><br><br>
 
     <button id="start-btn">Start</button>
-    <p style="font-size:0.9em; color:#bbb; margin-top:12px">
-      While running: press <strong>Esc</strong> to stop and return.
-    </p>
+    <p style="font-size:0.9em; color:#bbb;">Press Esc to stop early.</p>
   </div>
 
-  <!-- Blink Page -->
   <div id="blink-page" style="display:none;">
     <div class="flash"></div>
   </div>
